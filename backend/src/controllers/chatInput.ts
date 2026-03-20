@@ -1,5 +1,10 @@
 import type { Request, Response } from "express";
-export default function controlChat(req : Request, res : Response){
+import divert from "../services/chatServices"
+export default async function controlChat(req : Request, res : Response){
     const {model, message} = req.body;
-    res.send(model + message);
+    const response = await divert(model, message);
+    console.log("TYPE:", typeof response);
+    console.log("RAW:", response);
+    console.log("STRING:", JSON.stringify(response));
+    res.json(response);
 }
