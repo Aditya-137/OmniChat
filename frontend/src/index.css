@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&display=swap");
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #0A0A0A;
+    --bg-secondary: #0F0F0F;
+    --surface-dark: #141414;
+    --surface-card: #1A1A1A;
+    --surface-hover: #262626;
+    --border-primary: #262626;
+    --border-subtle: #1A1A1A;
+    --accent-cyan: #06B6D4;
+    --accent-cyan-dark: #048eab;
+    --accent-purple: #A855F7;
+    --text-primary: #F5F5F5;
+    --text-secondary: #888888;
+    --text-muted: #555555;
+    --error-red: #EF4444;
+    --warning-amber: #F59E0B;
+    --success-green: #22C55E;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a;
+}
+
+/* Code Highlighting Custom Overrides */
+pre code.hljs {
+  padding: 0 !important;
+  background: transparent !important;
+  font-family: "JetBrains Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
